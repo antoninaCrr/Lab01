@@ -113,5 +113,6 @@ public class FXMLController {
         assert btnReset != null : "fx:id=\"btnReset\" was not injected: check your FXML file 'Scene.fxml'.";
 
         elenco = new Parole() ;
+        elencoBis = new ParoleBis();
     }
 }
