@@ -1,40 +1,42 @@
 package it.polito.tdp.parole.model;
 
+import java.util.Collections;
+import java.util.ArrayList;
 import java.util.List;
-import java.util.*;
 
-public class Parole {
+public class ParoleBis {
+
 	
-	private LinkedList<String> paroleInserite = new LinkedList<String>();
+	private List<String> paroleInserite = new ArrayList<String>();
 		
-	public void addParola(String p) {
+	public void addParolaBis(String p) {
 		//TODO
 		this.paroleInserite.add(p);
 	}
 	
-	public List<String> getElenco() {
+	public List<String> getElencoBis() {
 		//TODO
-		LinkedList<String> paroleOrdinate = new LinkedList<String>(this.paroleInserite);
+		ArrayList<String> paroleOrdinate = new ArrayList<String>(this.paroleInserite);
 		Collections.sort(paroleOrdinate, new ComparatoreOrdineAlfabetico());
 		return paroleOrdinate;
 	}
 	
-	public void reset() {
+	public void resetBis() {
 		// TODO
 		this.paroleInserite.removeAll(paroleInserite);
 	}
 	
-	public void delete (String word) {
+	public void deleteBis (String word) {
 		for(String s : this.paroleInserite) {
 			if(s.equals(word))
 				this.paroleInserite.remove(s);
 		}
 	}
 
-	@Override
-	public String toString() {
+	
+	public String toStringBis() {
 		String s = "";
-		for(String si: this.getElenco()) {
+		for(String si: this.getElencoBis()) {
 			s += si+ " ";
 		}	
 		return s;
